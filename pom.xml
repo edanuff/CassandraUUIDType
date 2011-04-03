@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<properties>
+		<log4j-version>1.2.16</log4j-version>
+		<cassandra-version>0.7.0</cassandra-version>
+		<junit-version>4.8.2</junit-version>
+	</properties>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cassandra-uuid-type</groupId>
+	<artifactId>cassandra-uuid-type</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>CassandraUUIDType</name>
+	<dependencies>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit-version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cassandra</groupId>
+			<artifactId>cassandra-all</artifactId>
+			<version>${cassandra-version}</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+</project>
