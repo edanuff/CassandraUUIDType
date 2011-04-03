@@ -1,0 +1,19 @@
+Choosing between the TimeUUIDType and LexicalUUIDType is a pain, particularly
+when using auto-mapping inside a high-level Cassandra client like Hector.
+
+The TimeUUIDType will fail when it gets a UUID that isn't version 1 (time-based)
+and the LexicalUUIDType isn't doesn't really lexically compare UUIDs.
+
+See:
+
+http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=7025832
+http://www.anuff.com/2011/04/javautiluuidcompareto-considered-harmful.html
+
+This comparator will sort UUIDs first by their version number, then, if
+time-based, using the UUID timestamp component, and if not time-based,
+performing a correct lexical compare as specified by RFC 4122.
+
+This has been submitted as a patch to the Cassandra project:
+
+https://issues.apache.org/jira/browse/CASSANDRA-2233
+
