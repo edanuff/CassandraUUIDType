@@ -13,7 +13,8 @@ This comparator will sort UUIDs first by their version number, then, if
 time-based, using the UUID timestamp component, and if not time-based,
 performing a correct lexical compare as specified by RFC 4122.
 
-This has been submitted as a patch to the Cassandra project:
+This has been accepted as a patch to the Cassandra project for version 0.8:
 
 https://issues.apache.org/jira/browse/CASSANDRA-2233
 
+The version on GitHub will work with Cassandra 0.7.
